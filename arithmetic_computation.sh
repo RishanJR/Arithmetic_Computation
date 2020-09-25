@@ -17,19 +17,19 @@ declare -A RESULT
 
 #Computation 1 ( a+b*c )
 computation="a+b*c"
-RESULT[$computation]=$(( $num1+$num2*$num3 ))
+RESULT[$computation]=$(( $num1+$num2*$num3 ))		#Storing computation 1 in Dictionary RESULT
 
 #Computation 2 ( a*b+c )
 computation="a*b+c"
-RESULT[$computation]=$(( $num1*$num2+$num3 ))
+RESULT[$computation]=$(( $num1*$num2+$num3 ))		#Storing computation 2 in Dictionary RESULT
 
 #Computation 3 ( c*a/b )
 computation="c*a/b"
-RESULT[$computation]=$(( $num3+$num1/$num2 ))
+RESULT[$computation]=$(( $num3+$num1/$num2 ))		#Storing computation 3 in Dictionary RESULT
 
 #Computation 4 ( a%b+c )
 computation="a%b+c"
-RESULT[$computation]=$(( $num1%$num2+$num3 ))
+RESULT[$computation]=$(( $num1%$num2+$num3 ))		#Storing computation 4 in Dictionary RESULT
 
 echo -e "\nThe computations are"
 echo -e "\n${!RESULT[@]}"                              #Displays the computation type
