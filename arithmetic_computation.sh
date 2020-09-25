@@ -19,6 +19,11 @@ declare -A RESULT
 computation="a+b*c"
 RESULT[$computation]=$(( $num1+$num2*$num3 ))
 
+#Computation 2 ( a*b+c )
+computation="a*b+c"
+RESULT[$computation]=$(( $num1*$num2+$num3 ))
+
+echo -e "\nThe computations are"
 echo -e "\n${!RESULT[@]}"                              #Displays the computation type
 echo ${RESULT[@]}        	                       #Displays the result
 
