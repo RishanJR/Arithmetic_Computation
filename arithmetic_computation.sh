@@ -35,3 +35,17 @@ echo -e "\nThe computations are"
 echo -e "\n${!RESULT[@]}"                              #Displays the computation type
 echo ${RESULT[@]}        	                       #Displays the result
 
+#Declaring an array
+declare -a a
+
+#Variables
+count=0
+
+#Shifting from dictionary to array
+for computation in ${!RESULT[@]}
+do
+        a[count]=${RESULT[$computation]}        #count starting from 0
+        ((count++))
+done
+
+echo -e "\nThe array is: ${a[@]}"
