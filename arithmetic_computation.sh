@@ -12,3 +12,13 @@ read num3
 echo -e "\nThe numbers entered are:"
 echo $num1 $num2 $num3
 
+#Declaring a dictionary
+declare -A RESULT
+
+#Computation 1 ( a+b*c )
+computation="a+b*c"
+RESULT[$computation]=$(( $num1+$num2*$num3 ))
+
+echo -e "\n${!RESULT[@]}"                              #Displays the computation type
+echo ${RESULT[@]}        	                       #Displays the result
+
