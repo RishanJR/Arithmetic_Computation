@@ -39,12 +39,13 @@ echo ${RESULT[@]}        	                       #Displays the result
 declare -a a
 
 #Variables
-count=0
+count=0							#array length count
+descount=0						#array length count for ascending order
 
 #Shifting from dictionary to array
 for computation in ${!RESULT[@]}
 do
-        a[count]=${RESULT[$computation]}        #count starting from 0
+        a[count]=${RESULT[$computation]}        	#count starting from 0
         ((count++))
 done
 
@@ -66,3 +67,11 @@ done
 
 echo The result in descending order is ${a[@]}
 
+#Arranging in Ascending order
+for (( i=count-1 ; i>=0 ; i-- ))
+do
+        b[descount]=${a[i]}                     	#descount starts from 0
+        ((descount++))
+done
+
+echo The result in ascending order is ${b[@]}
