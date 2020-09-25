@@ -49,3 +49,20 @@ do
 done
 
 echo -e "\nThe array is: ${a[@]}"
+
+#Arranging in Descending order
+for (( i=0 ; i<count ; i++ ))
+do
+        for (( j=0 ; j<(count-i-1) ; j++ ))
+        do
+                if [[ a[j] -lt a[j+1] ]]
+                then
+                        temp=${a[j]}
+                        a[j]=${a[j+1]}
+                        a[j+1]=$temp
+                fi
+        done
+done
+
+echo The result in descending order is ${a[@]}
+
