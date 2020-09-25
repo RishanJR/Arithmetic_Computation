@@ -23,6 +23,10 @@ RESULT[$computation]=$(( $num1+$num2*$num3 ))
 computation="a*b+c"
 RESULT[$computation]=$(( $num1*$num2+$num3 ))
 
+#Computation 3 ( c*a/b )
+computation="c*a/b"
+RESULT[$computation]=$(( $num3+$num1/$num2 ))
+
 echo -e "\nThe computations are"
 echo -e "\n${!RESULT[@]}"                              #Displays the computation type
 echo ${RESULT[@]}        	                       #Displays the result
